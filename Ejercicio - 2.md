@@ -102,7 +102,7 @@ Relación del enlace con el documento.
 
 Obligatorio? El único obligatorio es el primero, el href.
 
-# 2e)
+# 2f)
 Sección del documento: se coloca dentro del `<body>`
 
 Efecto: crea una tabla con un título arriba, las columnas A, B y C, las filas 1º, 2º y celdas vacías (&nbsp)
