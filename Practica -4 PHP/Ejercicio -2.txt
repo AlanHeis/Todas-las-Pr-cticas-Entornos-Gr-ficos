@@ -1,0 +1,3 @@
+a) Sí, son equivalentes. Devuelven el mismo valor, la única diferencia es que en el tercer código la variable incremental queda en 10 no en 11.
+b) Sí, son equivalentes. Los 4 devuelven el mismo valor y funcionan igual.
+c) Sí, son equivalentes. La sentencia del switch es una sentencia de decisión múltiple y tiene la misma función que un elseif.
