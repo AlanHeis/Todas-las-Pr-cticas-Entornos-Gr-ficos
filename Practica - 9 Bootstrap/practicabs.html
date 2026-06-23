@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="container contenedor">
+
+    <!-- Fila 1: 1 columna 100% -->
+    <div class="row">
+        <div class="col-12">
+            <div style="background-color: #9b7bb5; min-height: 80px;"></div>
+        </div>
+    </div>
+
+    <!-- Fila 2: 2 columnas 50/50 en md+, 100% en sm -->
+    <div class="row mt-2">
+        <div class="col-sm-12 col-md-6">
+            <div style="background-color: #f5d9c8; min-height: 60px;"></div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div style="background-color: #c9a0a8; min-height: 60px;"></div>
+        </div>
+    </div>
+
+    <!-- Estructura principal: sidebar col-3 + contenido col-9 -->
+    <div class="row mt-3">
+
+        <!-- Sidebar col-3 -->
+        <div class="col-sm-12 col-md-3" style="background-color: #f5d9c8; min-height: 400px; padding: 10px;">
+            <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#miModal">
+                Abrir Modal
+            </button>
+        </div>
+
+        <!-- Contenido col-9 -->
+        <div class="col-sm-12 col-md-9">
+
+            <!-- Alerta verde -->
+            <div style="background-color: #5cb85c;" class="p-2">
+                <div class="alert alert-success mb-0">¡Operación realizada con éxito!</div>
+            </div>
+
+            <!-- 4 cards en 2 filas de 2 (col-3 cada una dentro del col-9) -->
+            <div class="row mt-2">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card">
+                        <img src="foto1.png" class="card-img-top" style="height:120px; object-fit:cover;" alt="Newells">
+                        <div class="card-body">
+                            <h5 class="card-title">Título</h5>
+                            <p class="card-text">Texto descriptivo</p>
+                            <a href="#" class="btn btn-primary">Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card">
+                        <img src="foto1.png" class="card-img-top" style="height:120px; object-fit:cover;" alt="Newells">
+                        <div class="card-body">
+                            <h5 class="card-title">Título</h5>
+                            <p class="card-text">Texto descriptivo</p>
+                            <a href="#" class="btn btn-primary">Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card">
+                        <img src="foto1.png" class="card-img-top" style="height:120px; object-fit:cover;" alt="Newells">
+                        <div class="card-body">
+                            <h5 class="card-title">Título</h5>
+                            <p class="card-text">Texto descriptivo</p>
+                            <a href="#" class="btn btn-primary">Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card">
+                        <img src="foto1.png" class="card-img-top" style="height:120px; object-fit:cover;" alt="Newells">
+                        <div class="card-body">
+                            <h5 class="card-title">Título</h5>
+                            <p class="card-text">Texto descriptivo</p>
+                            <a href="#" class="btn btn-primary">Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fila inferior: azul chico col-3 + carousel col-6 -->
+            <div class="row mt-2">
+                <div class="col-sm-6 col-md-3">
+                    <div style="background-color: #7a9fc2; min-height: 200px;"></div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div id="miCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="foto2.png" class="d-block w-100" style="height:200px; object-fit:cover;" alt="Newells">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto2.png" class="d-block w-100" style="height:200px; object-fit:cover;" alt="Newells">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="foto2.png" class="d-block w-100" style="height:200px; object-fit:cover;" alt="Newells">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#miCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#miCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="miModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">Contenido del modal</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
