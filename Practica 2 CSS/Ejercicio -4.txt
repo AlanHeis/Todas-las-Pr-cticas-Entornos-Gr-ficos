@@ -1,0 +1,24 @@
+
+* { color: green; }
+a:link { color: gray; }
+a:visited { color: blue; }
+a:hover { color: fuchsia; }
+a:active { color: red; }
+p { font-family: arial, helvetica; font-size: 10px; color: black; }
+.contenido { font-size: 14px; font-weight: bold; }
+
+Caso 1: <p class="contenido" style="font-weight: normal;">
+La etiqueta <p> aplica el estilo del selector p (10px, negro).
+El selector .contenido intenta cambiar el tamaño a 14px y poner negrita, pero la especificidad de p y el estilo en línea (style="font-weight: normal;") sobreescriben parcialmente estas propiedades.
+Los elementos de la tabla no afectados por selectores específicos heredan el color verde del selector universal (*).
+Los enlaces (<a>) utilizan las pseudo-clases (link: gris, visited: azul, hover: fuchsia, active: rojo).
+
+Caso 2: <body class="contenido">
+Al aplicar la clase .contenido al <body>, esta propiedad se hereda hacia abajo en el documento.
+La etiqueta <p> sigue siendo afectada por su selector p, el cual tiene mayor especificidad que la clase heredada del <body>, manteniendo su tamaño de 10px y color negro, ignorando el tamaño de 14px de la clase.
+La diferencia principal radica en la jerarquía de la cascada: el estilo definido directamente en un elemento o mediante una clase específica siempre prevalece sobre la herencia de un padre como <body>.
+
+
+Estilo en línea (style="...") tiene la máxima prioridad.
+Selectores de clase (.contenido) son más específicos que el selector universal (*) y que el selector de etiqueta genérico (p) en algunos contextos, pero el selector de etiqueta tiene prioridad sobre propiedades heredadas.
+Pseudo-clases (a:...) controlan los estados interactivos de los enlaces.

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Ejercicio 5</title>
+        <style>
+            h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+                color: red;
+            }
+
+            div p [href] {
+                color: black;
+            }
+
+            #ultimo ul li {
+                color: yellow;
+            }
+            #ultimo ul li a {
+                color: blue;
+            }
+
+            div #importante {
+                color: green;
+            }
+            div h1 #importante,
+            div h2 #importante,
+            div h3 #importante,
+            div h4 #importante,
+            div h5 #importante,
+            div h6 #importante {
+                color: red;
+            }
+
+            h1[title] {
+                color: blue;
+            }
+
+            ol li a:link {
+                color: blue;
+                text-decoration: none;
+            }
+            ol li a:visited {
+                color: violet;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h3>Ejemplo 1</h3>
+        <h1>Título con texto <em>enfatizado en rojo</em></h1>
+
+        <h3>Ejemplo 2</h3>
+        <div>
+            <p>
+                <a href="https://www.google.com">Enlace negro</a>
+            </p>
+        </div>
+
+        <h3>Ejemplo 3</h3>
+        <div id="ultimo">
+            <ul>
+                <li>RAM (amarillo)</li>
+                <li>GPU (amarillo)</li>
+                <li><a href="https://www.frro.utn.edu.ar/">Enlace azul</a></li>
+            </ul>
+        </div>
+
+        <h3>Ejemplo 4</h3>
+        <div>
+            <p id="importante">Párrafo importante</p>
+            <a id="importante">Link importante</a>
+            <h1><span id="importante">Importante dentro de título</span></h1>
+        </div>
+
+        <h3>Ejemplo 5</h3>
+        <h1 title="con-titulo">Título con atributo title</h1>
+        <h1>Título sin atributo title</h1>
+
+        <h3>Ejemplo 6</h3>
+        <ol>
+            <li><a href="https://www.google.com">Enlace en lista ordenada</a></li>
+        </ol>
+
+    </body>
+</html>

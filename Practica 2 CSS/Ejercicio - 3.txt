@@ -1,0 +1,33 @@
+
+/* Regla específica para elementos <p> con clase "quitar" */
+p.quitar {
+    color: red;
+}
+p.quitar: aplica color rojo exclusivamente a las etiquetas <p> que incluyan la clase "quitar". El elemento <h1 class="quitar"> no se ve afectado porque el selector es específico para <p>.
+
+
+/* Regla para cualquier elemento con clase "desarrollo" */
+*.desarrollo {
+    font-size: 8px;
+}
+*.desarrollo: aplica un tamaño de fuente de 8px a cualquier elemento que posea la clase "desarrollo".
+
+
+/* Regla para cualquier elemento con clase "importante" */
+.importante {
+    font-size: 20px;
+}
+.importante: aplica un tamaño de fuente de 20px a cualquier elemento que posea la clase "importante".
+
+
+Combinación de clases: En <p class="quitar importante">, el elemento recibe ambos estilos: se vuelve rojo (por p.quitar) y su fuente cambia a 20px (por .importante), independientemente del orden de las clases.
+
+Elementos sin clase: Un <p> sin clase (como el del código original) no recibe ninguno de estos estilos, ya que no cumple con las condiciones de los selectores.
+
+* Hoja de estilo interna:
+  <style>
+    p.quitar { color: red; }
+  </style>
+
+* Hoja de estilo externa (archivo .css):
+  Se vincula en el HTML mediante: <link href="archivo.css" rel="stylesheet">

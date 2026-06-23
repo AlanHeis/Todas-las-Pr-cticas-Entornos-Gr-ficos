@@ -1,0 +1,26 @@
+1. CSS es un lenguaje de hojas de estilo encargado de definir el aspecto visual, el formato y el layout de los documentos web. Su funcion principal es desacoplar el contenido (HTML) de la presentacion visual. lo que facilita el mantenimiento del sitio y mejora su adaptabilidad a distintos dispositivos.
+2. Operan mediante una estructura de "regla" compuesta por dos partes principales:
+* Selector: define sobre qué elementos de HTML recaerá el estilo.
+* Bloque de declaración: contendio entre llaves, donde se definen pares de propiedad: valor;. Por ejemplo, color: blue; indica que la propiedad color tomará el valor azul.
+3. 
+En línea: directamente en la etiqueta HTML mediante el atributo style.
+Interna: dentro de la cabecera del documento usando el bloque `<style>`.
+Externa: vinculando un archivo con extensión .css mediante la etiqueta `<link>` en el `<head>`, siendo esta la práctica más recomendada.
+4.
+Selector de tipo: afecta a todas las etiquetas de ese nombre. (Ej: h1 { color: red; }).
+Selector de clase: afecta a cualquier elemento que contenga dicho atributo. (Ej: .menu { background: black; }).
+Selector de ID: afecta a un único elemento específico en la página. (Ej: #logo { width: 100px; }).
+5.
+Es un selector especial que permite aplicar estilos basándose en el estado dinámico de un elemento, en lugar de su tipo o ID.
+En los vínculos (`<a>`), las más comunes son:
+:link (vínculo sin visitar).
+:visited (vínculo ya visitado).
+:hover (cuando el cursor se posiciona sobre el elemento).
+:active (durante el clic del usuario).
+6.
+Es un mecanismo mdiante el cual las propiedades aplicadas a un elemento padre se propagan automáticamente a sus elementos hijos. Por ejemplo, si aplicas un tipo de funde al `<body>`, la mayoria de los elemntos del texto dentro de él la adoptarán a menos que se les defina una regla específica que sobrescriba dicho estilo.
+7.
+Es el proceso lógico por el cual el navegador decide qué estilos aplicar cuando hay reglas en conflicto. Se basa en tres criterios jerárquicos:
+Importancia: Las declaraciones marcadas con !important tienen precedencia absoluta.
+Especificidad: Se otorga mayor peso a los selectores más precisos (un ID es más específico que una clase, y una clase es más específica que una etiqueta).
+Orden de origen: Si dos reglas tienen igual especificidad, la que aparece más abajo en el archivo CSS (o la última en ser cargada) es la que se aplica finalmente.

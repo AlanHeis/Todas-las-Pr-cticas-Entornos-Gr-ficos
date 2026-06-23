@@ -1,0 +1,33 @@
+
+/* Regla específica para párrafos con id="normal" */
+p#normal {
+    font-family: arial, helvetica;
+    font-size: 11px;
+    font-weight: bold;
+}
+p#normal: Aplica una tipografía Arial/Helvetica, tamaño de 11px y negrita exclusivamente a las etiquetas <p> que tengan el identificador 'normal'[cite: 22, 23, 24, 25, 26, 27].
+
+
+/* Regla para cualquier elemento con id="destacado" */
+#destacado {
+    border-style: solid;
+    border-color: blue;
+    border-width: 2px;
+}
+#destacado: Se aplica a cualquier elemento (ya sea un párrafo o una tabla) con id="destacado". Produce un borde sólido azul de 2px de ancho alrededor del contenido.
+
+
+/* Regla para elementos con id="distinto" */
+#distinto {
+    background-color: #9EC7EB;
+    color: red;
+}
+#distinto: Asigna un fondo celeste (#9EC7EB) y color de letra rojo a cualquier elemento que posea el id="distinto".
+
+* Hoja de estilo interna:
+  <style>
+    #distinto { background-color: #9EC7EB; color: red; }
+  </style>
+
+* Hoja de estilo externa (archivo .css):
+  Se vincula en el HTML mediante: <link href="archivo.css" rel="stylesheet">

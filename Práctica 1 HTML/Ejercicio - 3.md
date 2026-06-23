@@ -274,14 +274,3 @@ Es un menú desplegable estándar. El usuario solo puede seleccionar una opción
 </optgroup>
 </select>
 Crea un selector de lita que permite seleccionar multiples opciones a la vez. Los valores seleciconados se envían como un arreglo al servidor. Tambien usa optgroup para organizar las oopciones. 
-
-
-
-
-
-
-
-
-
-
-
